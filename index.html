@@ -25,6 +25,29 @@ main{overflow:hidden}.section{padding:114px 24px}.inner{max-width:var(--max);mar
 
 .newgallery{background:#fffaf3;padding:75px 24px}.newgallery .pics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.newgallery figure{margin:0;background:#fff;border:1px solid var(--line)}.newgallery figure img{width:100%;aspect-ratio:4/5;object-fit:cover}.newgallery figcaption{font-size:12px;padding:12px;color:var(--muted)}
 @media(max-width:720px){.newgallery{padding:65px 20px}.newgallery .pics{grid-template-columns:repeat(2,1fr)}.newgallery figure img{aspect-ratio:4/5}}
+
+/* v0.5: comma-based intentional title breaks, centered and phone-friendly */
+.titleLine{display:block;white-space:nowrap}
+.sectionTitle,.heartText .sectionTitle,.dream h2{text-align:center;text-wrap:balance}
+.heroCopy{text-align:center;align-items:center}
+.hero .eyebrow{justify-content:center}
+.heroButtons{justify-content:center}
+.hero h1{text-align:center;letter-spacing:.012em;font-size:clamp(29px,3.6vw,49px)}
+.sectionTitle{font-size:clamp(25px,2.75vw,39px);letter-spacing:.045em}
+.heartText .sectionTitle{font-size:clamp(24px,2.5vw,37px)}
+.dream h2{font-size:clamp(27px,2.7vw,41px);letter-spacing:.045em}
+@media(max-width:720px){
+ .hero h1{font-size:clamp(24px,7.3vw,37px);letter-spacing:0}
+ .sectionTitle{font-size:clamp(22px,6.25vw,30px);letter-spacing:.015em}
+ .heartText .sectionTitle{font-size:clamp(21px,6vw,29px)}
+ .dream h2{font-size:clamp(24px,6.5vw,32px)}
+}
+@media(max-width:360px){
+ .hero h1{font-size:6.9vw}
+ .sectionTitle{font-size:6.1vw}
+ .heartText .sectionTitle{font-size:5.9vw}
+ .dream h2{font-size:6.1vw}
+}
 </style>
 </head>
 <body>
@@ -36,32 +59,32 @@ main{overflow:hidden}.section{padding:114px 24px}.inner{max-width:var(--max);mar
 </div></header>
 <main id="top">
 <section class="hero" aria-label="花ふぶき一座へようこそ">
-<div class="heroCopy"><div class="eyebrow">笑顔に会いに、今日も</div><h1><span>あなたの笑顔に</span><span>あえるしあわせ。</span></h1><div class="line"></div><p>ちんどんの音が響けば、<br>まちに笑顔の花が咲く。<br>あなたのそばに、花ふぶき一座。</p><div class="heroButtons"><a class="button primary" href="#heart">私たちの想いを読む　↗</a><a class="button secondary" href="#activity">活動を見る</a></div></div>
+<div class="heroCopy"><div class="eyebrow">笑顔に会いに、今日も</div><h1><span class="titleLine">あなたの笑顔に</span><span class="titleLine">あえるしあわせ。</span></h1><div class="line"></div><p>ちんどんの音が響けば、<br>まちに笑顔の花が咲く。<br>あなたのそばに、花ふぶき一座。</p><div class="heroButtons"><a class="button primary" href="#heart">私たちの想いを読む　↗</a><a class="button secondary" href="#activity">活動を見る</a></div></div>
 <div class="heroPhoto"><img src="assets/IMG_6572.webp" alt="宮田さんと花ふぶき一座が子どもたちと笑顔で交流する様子" fetchpriority="high"><div class="heroBadge">地域と、笑顔と、ちんどん。</div></div>
 </section>
-<section class="section heart" id="heart"><div class="inner heartgrid"><div class="heartImage"><img src="assets/IMG_6565.webp" alt="地域の方と手を取り合う宮田さん" loading="lazy"></div><div class="heartText"><div class="en">OUR HEART</div><h2 class="sectionTitle">一瞬の出会いが、<br>私たちの宝物。</h2><div class="flowerline" aria-hidden="true">✿</div><p>ちんどんは、音楽を奏でるだけではありません。</p><p>すれ違う人々の心がほっこりあたたかくなり、世代を超えてコミュニケーションがとれることを幸せに感じています。</p><p>地域の皆さんにとって、身近な縁起物でありたい。人を笑顔と元気にする芸を、これからも磨いてまいります。</p><div class="sign">あなたの笑顔にあえるしあわせ。</div></div></div></section>
-<section class="section activity" id="activity"><div class="inner"><div class="sectionHead"><div class="en">OUR MOMENTS</div><h2 class="sectionTitle">笑顔が咲く、私たちの舞台。</h2><div class="under"></div><p class="lead">まちかどで、舞台で、地域の皆さんと。<br>音と笑顔を交わした日々の一場面をご紹介します。</p></div><div class="mosaic">
+<section class="section heart" id="heart"><div class="inner heartgrid"><div class="heartImage"><img src="assets/IMG_6565.webp" alt="地域の方と手を取り合う宮田さん" loading="lazy"></div><div class="heartText"><div class="en">OUR HEART</div><h2 class="sectionTitle"><span class="titleLine">一瞬の出会いが、</span><span class="titleLine">私たちの宝物。</span></h2><div class="flowerline" aria-hidden="true">✿</div><p>ちんどんは、音楽を奏でるだけではありません。</p><p>すれ違う人々の心がほっこりあたたかくなり、世代を超えてコミュニケーションがとれることを幸せに感じています。</p><p>地域の皆さんにとって、身近な縁起物でありたい。人を笑顔と元気にする芸を、これからも磨いてまいります。</p><div class="sign">あなたの笑顔にあえるしあわせ。</div></div></div></section>
+<section class="section activity" id="activity"><div class="inner"><div class="sectionHead"><div class="en">OUR MOMENTS</div><h2 class="sectionTitle"><span class="titleLine">笑顔が咲く、</span><span class="titleLine">私たちの舞台。</span></h2><div class="under"></div><p class="lead">まちかどで、舞台で、地域の皆さんと。<br>音と笑顔を交わした日々の一場面をご紹介します。</p></div><div class="mosaic">
 <div class="tile"><img src="assets/IMG_6567.webp" alt="歴史ある街並みに集う演者たち" loading="lazy"><div class="tileLabel"><small>TRADITION & COMMUNITY</small>まちとともに</div></div>
 <div class="tile"><img src="assets/IMG_6569.webp" alt="客席の間を進みながら演奏する花ふぶき一座" loading="lazy"><div class="tileLabel"><small>LIVE PERFORMANCE</small>客席にも笑顔を</div></div>
 <div class="tile"><img src="assets/IMG_6574.webp" alt="港の近くで演奏する花ふぶき一座" loading="lazy"><div class="tileLabel"><small>LOCAL STORIES</small>地域のお祭りに</div></div>
 <div class="tile"><img src="assets/IMG_6568.webp" alt="舞台で獅子舞を披露する様子" loading="lazy"><div class="tileLabel"><small>JAPANESE CULTURE</small>芸を未来へ</div></div>
 <div class="tile"><img src="assets/IMG_6562.webp" alt="笑顔で並ぶ着物姿の演者たち" loading="lazy"><div class="tileLabel"><small>PEOPLE & CONNECTIONS</small>ご縁を重ねて</div></div>
 </div></div></section>
-<section class="newgallery" id="newmoments" aria-label="新しい出会いの写真"><div class="inner"><div class="sectionHead"><div class="en">MORE SMILES</div><h2 class="sectionTitle">笑顔に出会う、まちのなかで。</h2><div class="under"></div><p class="lead">何気ない一瞬の出会いも、私たちの宝物です。</p></div><div class="pics">
+<section class="newgallery" id="newmoments" aria-label="新しい出会いの写真"><div class="inner"><div class="sectionHead"><div class="en">MORE SMILES</div><h2 class="sectionTitle"><span class="titleLine">笑顔に出会う、</span><span class="titleLine">まちのなかで。</span></h2><div class="under"></div><p class="lead">何気ない一瞬の出会いも、私たちの宝物です。</p></div><div class="pics">
 <figure><img src="assets/IMG_6609.webp" alt="子どもに目線を合わせて笑顔を交わすちんどんの演者" loading="lazy"><figcaption>目と目を合わせて</figcaption></figure>
 <figure><img src="assets/IMG_6607.webp" alt="神社の入り口で親子と交流するちんどんの演者" loading="lazy"><figcaption>まちかどの出会い</figcaption></figure>
 <figure><img src="assets/IMG_6608.webp" alt="門松のそばで一座と子どもたちが並ぶ記念写真" loading="lazy"><figcaption>季節をともに</figcaption></figure>
 <figure><img src="assets/IMG_6610.webp" alt="廊下でちんどんの演者を見つめる子どもたち" loading="lazy"><figcaption>音を待つ時間</figcaption></figure>
 </div></div></section>
 <section class="section portrait" id="profile"><div class="inner profilegrid"><div class="profilepic"><img src="assets/IMG_6573.webp" alt="赤白の衣装で自然な笑顔を見せる宮田さん" loading="lazy"><div class="label">座長 · 宮田若奈</div></div><div><div class="en">THE PERSON BEHIND THE MUSIC</div><h3>宮田 若奈 <small>／ 座長</small></h3><p>人と出会い、笑顔を交わす。そのひとときを何よりの喜びとして、ちんどんの芸を届けています。</p><p>日本の伝統を大切にしながら、地域の皆さんにとって身近な存在でありたい。そんな想いを胸に、一つひとつの出会いに向き合っています。</p><p class="note">座長・宮田若奈。芸を通して人を笑顔に、地域を元気に。<br>経歴・受賞歴は確認のうえ、今後ご紹介します。</p></div></div></section>
-<section class="section dream" id="dream"><div class="inner"><div><div class="en">SHARING THE DREAM</div><h2>笑顔をつなぐ、<br>夢をともに。</h2><p>私たちが出会いたいのは、同じように人の笑顔を大切にしたいと思ってくださる方。</p><p>芸を磨く人も、応援してくださる人も。新しいご縁から、次の夢が広がっていくことを願っています。</p><a class="button" href="#contact">ご縁についてのお問い合わせ　↗</a></div><div class="dreamPhoto"><img src="assets/IMG_6563.webp" alt="笑顔で手を振る花ふぶき一座の演者たち" loading="lazy"></div></div></section>
-<section class="section connections" id="media"><div class="inner"><div class="sectionHead"><div class="en">STAY CONNECTED</div><h2 class="sectionTitle">あなたと、つながる場所。</h2><div class="under"></div><p class="lead">日々の笑顔、演奏の音、言葉で綴る想い。<br>それぞれの場所から、花ふぶき一座の世界をお届けします。</p></div><div class="mediaGrid">
+<section class="section dream" id="dream"><div class="inner"><div><div class="en">SHARING THE DREAM</div><h2><span class="titleLine">笑顔をつなぐ、</span><span class="titleLine">夢をともに。</span></h2><p>私たちが出会いたいのは、同じように人の笑顔を大切にしたいと思ってくださる方。</p><p>芸を磨く人も、応援してくださる人も。新しいご縁から、次の夢が広がっていくことを願っています。</p><a class="button" href="#contact">ご縁についてのお問い合わせ　↗</a></div><div class="dreamPhoto"><img src="assets/IMG_6563.webp" alt="笑顔で手を振る花ふぶき一座の演者たち" loading="lazy"></div></div></section>
+<section class="section connections" id="media"><div class="inner"><div class="sectionHead"><div class="en">STAY CONNECTED</div><h2 class="sectionTitle"><span class="titleLine">あなたと、</span><span class="titleLine">つながる場所。</span></h2><div class="under"></div><p class="lead">日々の笑顔、演奏の音、言葉で綴る想い。<br>それぞれの場所から、花ふぶき一座の世界をお届けします。</p></div><div class="mediaGrid">
 <a class="media" href="https://www.instagram.com/chin_don_wakachan/" target="_blank" rel="noopener noreferrer"><span class="sym">✿</span><strong>Instagram</strong><small>日々の活動と、出会った笑顔</small><span class="arrow">見る ↗</span></a>
 <a class="media" href="https://www.youtube.com/@hanahubukiichiza" target="_blank" rel="noopener noreferrer"><span class="sym">▷</span><strong>YouTube</strong><small>ちんどんの音色とパフォーマンス</small><span class="arrow">見る ↗</span></a>
 <a class="media" href="http://hanahubukiichiza.miyachan.cc/" target="_blank" rel="noopener noreferrer"><span class="sym">✎</span><strong>みやちゃんブログ</strong><small>大切に綴ってきた日々の記録</small><span class="arrow">読む ↗</span></a>
 
 </div></div></section>
-<section class="section contact" id="contact"><div class="inner"><div class="en">CONTACT</div><h2 class="sectionTitle">笑顔のご縁を、ここから。</h2><p>出演のご相談、花ふぶき一座への応援、仲間とのご縁。<br>まずはInstagramから活動をご覧ください。<br>お問い合わせ先は宮田さんと確認のうえ、こちらにご案内します。</p><div class="contactLinks"><a class="button primary" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/chin_don_wakachan/">Instagramを見る ↗</a><a class="button secondary" href="#media">活動メディアを見る</a></div></div></section>
+<section class="section contact" id="contact"><div class="inner"><div class="en">CONTACT</div><h2 class="sectionTitle"><span class="titleLine">笑顔のご縁を、</span><span class="titleLine">ここから。</span></h2><p>出演のご相談、花ふぶき一座への応援、仲間とのご縁。<br>まずはInstagramから活動をご覧ください。<br>お問い合わせ先は宮田さんと確認のうえ、こちらにご案内します。</p><div class="contactLinks"><a class="button primary" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/chin_don_wakachan/">Instagramを見る ↗</a><a class="button secondary" href="#media">活動メディアを見る</a></div></div></section>
 </main>
 <footer class="foot"><img src="assets/LOGO1.png" alt="宮崎花ふぶき一座の文字入りロゴ" loading="lazy"><p>あなたのそばに、花ふぶき一座。<br>ちんどんの音が響けば、まちに笑顔の花が咲く。</p><p class="copy">© 宮崎花ふぶき一座 · v0.4 デザイン確認用</p></footer>
 <script>
